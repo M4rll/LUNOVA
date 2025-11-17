@@ -1,0 +1,113 @@
+/* ===== FEATURES SECTION - VANTAGENS ===== */
+.features-section {
+  padding: 8rem 0;
+  background: var(--azul-escuro);
+  position: relative;
+  overflow: hidden;
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+  transition: left var(--transition-slow);
+}
+
+.feature-card:hover::before {
+  left: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--azul-destaque);
+  box-shadow: var(--sombra-destaque);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  border: 2px solid var(--azul-medio);
+  transition: all var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--azul-destaque);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--branco);
+}
+
+.feature-card p {
+  color: var(--cinza-claro);
+  line-height: 1.6;
+}
+
+/* Animações em sequência */
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 4rem 0;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+}
