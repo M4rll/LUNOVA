@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunova | Infoprodutos Premium - Transforme Seu Conhecimento</title>
+    <meta name="description" content="Os infoprodutos mais cobiçados do mercado. Conteúdo exclusivo que vai revolucionar sua carreira e vida pessoal.">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/produtos.css">
+    <link rel="stylesheet" href="./styles/features.css">
+    <link rel="stylesheet" href="./styles/sobre.css">
+    <link rel="stylesheet" href="./styles/contato.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">🌙</div>
+            <div class="loading-text">Lunova</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Personalizado -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo" data-aos="fade-down">
+                <div class="logo-icon">🌙</div>
+                <span class="logo-text">Lunova</span>
+            </div>
+            
+            <nav class="nav" data-aos="fade-down">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#features" class="nav-link">Vantagens</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions" data-aos="fade-down">
+                <button class="search-btn" id="searchBtn">
+                    <span>🔍</span>
+                </button>
+                <div class="carrinho-icon" onclick="abrirCarrinho()">
+                    <span>🛒</span>
+                    <div class="carrinho-count">0</div>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="O que você está buscando?" class="search-input">
+                <button class="search-close" id="searchClose">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-up">
+                    🚀 INFOPRODUTOS PREMIUM
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    Conhecimento que 
+                    <span class="gradient-text">Transforma</span>
+                    Vidas
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                    Descubra os infoprodutos mais cobiçados do mercado. 
+                    <span class="highlight">Conteúdo exclusivo</span> que vai revolucionar 
+                    sua carreira e vida pessoal.
+                </p>
+
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+                    <button class="btn-primary" onclick="scrollToSection('produtos')">
+                        Explorar Produtos
+                        <span class="btn-sparkle">✨</span>
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('features')">
+                        <span>▶</span>
+                        Ver Demonstração
+                    </button>
+                </div>
+
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Alunos Transformados</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Avaliação Positiva</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Suporte Premium</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="floating-card card-1">
+                    <div class="card-icon">📚</div>
+                    <div class="card-title">E-books Exclusivos</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title">Cursos Completos</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Templates Profissionais</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section class="produtos-section" id="produtos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    Nossas 
+                    <span class="gradient-text">Jóias</span> 
+                    do Conhecimento
+                </h2>
+                <p class="section-subtitle">
+                    Seleção curada dos infoprodutos mais transformadores do mercado
+                </p>
+            </div>
+
+            <div class="produtos-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="curso">Cursos</button>
+                <button class="filter-btn" data-filter="ebook">E-books</button>
+                <button class="filter-btn" data-filter="template">Templates</button>
+                <button class="filter-btn" data-filter="mentoria">Mentorias</button>
+            </div>
+
+            <div class="produtos-grid" id="produtosGrid">
+                <!-- Produtos carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    Por que a 
+                    <span class="gradient-text">Lunova</span> 
+                    é Diferente?
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Conteúdo Exclusivo</h3>
+                    <p>Materiais que você não encontra em nenhum outro lugar</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Acesso Imediato</h3>
+                    <p>Comece a transformação agora mesmo</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Especialistas do Mercado</h3>
+                    <p>Aprenda com os melhores profissionais</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Atualizações Constantes</h3>
+                    <p>Conteúdo sempre atualizado com as últimas tendências</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="sobre-section" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text" data-aos="fade-right">
+                    <h2>Mais que uma Plataforma, uma <span class="gradient-text">Missão</span></h2>
+                    <p>A Lunova nasceu da paixão por transformar vidas através do conhecimento. Acreditamos que cada pessoa tem um potencial extraordinário esperando para ser desbloqueado.</p>
+                    <p>Nossa curadoria rigorosa garante que apenas os melhores infoprodutos cheguem até você, com qualidade premium e resultados comprovados.</p>
+                    
+                    <div class="sobre-stats">
+                        <div class="sobre-stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Produtos Premium</div>
+                        </div>
+                        <div class="sobre-stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Vidas Transformadas</div>
+                        </div>
+                        <div class="sobre-stat">
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label">Avaliação Média</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sobre-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <div class="card-content">
+                            <div class="card-icon">🌙</div>
+                            <h3>Excelência Lunova</h3>
+                            <p>Padrão de qualidade incomparável</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Pronto para sua <span class="gradient-text">Transformação</span>?</h2>
+                <p>Junte-se a milhares de pessoas que já revolucionaram suas vidas com a Lunova</p>
+                <button class="btn-primary btn-large" onclick="scrollToSection('produtos')">
+                    Começar Agora
+                    <span class="btn-sparkle">🚀</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">🌙</div>
+                        <span class="logo-text">Lunova</span>
+                    </div>
+                    <p>Transformando conhecimento em resultados extraordinários.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Produtos</h4>
+                        <a href="#">Cursos Online</a>
+                        <a href="#">E-books</a>
+                        <a href="#">Templates</a>
+                        <a href="#">Mentorias</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Carreiras</a>
+                        <a href="#">Contato</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <a href="#">Central de Ajuda</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lunova. Todos os direitos reservados. Feito com 💜 e ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrinho Sidebar -->
+    <div class="carrinho-sidebar" id="carrinhoSidebar">
+        <div class="carrinho-header">
+            <h3>Seu Carrinho</h3>
+            <button class="carrinho-close" onclick="fecharCarrinho()">✕</button>
+        </div>
+        <div class="carrinho-content" id="carrinhoContent">
+            <!-- Itens do carrinho -->
+        </div>
+        <div class="carrinho-footer">
+            <div class="carrinho-total">
+                <span>Total:</span>
+                <span id="carrinhoTotal">R$ 0,00</span>
+            </div>
+            <button class="btn-primary btn-block">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/produtos.js"></script>
+    <script src="./scripts/carrinho.js"></script>
+    <script src="./scripts/animations.js"></script>
+</body>
+</html>
